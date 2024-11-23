@@ -11,6 +11,13 @@
 
 ## 🚀 How to Use  
 ### 1️⃣ Pull the Image:  
+
 ```bash
 docker pull francotel/pod-info:v1
+```
+
+### 2️⃣ Run the Container:
+
+```bash
+docker run -d -p 80:80 -e NODE_NAME="your-node-name" francotel/pod-info:v1
 ```
