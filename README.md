@@ -82,4 +82,5 @@ spec:
     app: podinfo
 ```
 
+Enjoy deploying and showcasing your pod information! 🌟
 
