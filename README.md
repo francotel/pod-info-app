@@ -21,3 +21,10 @@ docker pull francotel/pod-info:v1
 ```bash
 docker run -d -p 80:80 -e NODE_NAME="your-node-name" francotel/pod-info:v1
 ```
+
+###  3️⃣ Access the Application:
+🌐 Open your browser and visit:
+
+http://<local-ip>:80
+
+Here, you'll see your pod details displayed!
