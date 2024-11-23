@@ -32,5 +32,12 @@ http://<local-ip>:80
 Here, you'll see your pod details displayed!
 
 🔧 Environment Variables
-NODE_NAME: Specifies the Kubernetes node name where the pod runs. Default: "Unknown Node".
+```bash
+NODE_NAME: Specifies the Kubernetes node name where the pod runs. Default: "Unknown Node".  
 POD_NAME: Automatically derived from the container hostname.
+```
+
+###  🛠️ Kubernetes Deployment Example
+Here’s a sample Kubernetes YAML configuration to deploy Pod Info:
+
+
