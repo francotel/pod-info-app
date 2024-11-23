@@ -40,4 +40,46 @@ POD_NAME: Automatically derived from the container hostname.
 ###  🛠️ Kubernetes Deployment Example
 Here’s a sample Kubernetes YAML configuration to deploy Pod Info:
 
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: podinfo
+  labels:
+    app: podinfo
+spec:
+  replicas: 2  # Number of pods to run
+  selector:
+    matchLabels:
+      app: podinfo
+  template:
+    metadata:
+      labels:
+        app: podinfo
+    spec:
+      containers:
+      - name: podinfo
+        image: francotel/pod-info:v1
+        ports:
+        - containerPort: 80
+        env:
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: podinfo-service
+spec:
+  type: NodePort  # Change to LoadBalancer for cloud setups
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30080  # Exposed node port
+  selector:
+    app: podinfo
+```
+
 
