@@ -1,9 +1,7 @@
 # 📦 Pod Info  
 **Pod Info** is a lightweight Docker image built with Nginx and Alpine 🐳. It dynamically shows the Kubernetes pod name and node name 🖥️ on a webpage, making it a simple and effective tool to verify your Kubernetes setup 🚀.  
 
-<div style="text-align: center;">
-    <img src="./image.png" alt="pod info" width="500"/>  
-</div>
+![alt text](image.png)
 
 ## ✨ Features  
 - 📝 Displays **Pod Name** and **Node Name** dynamically based on environment variables.  
